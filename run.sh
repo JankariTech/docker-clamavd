@@ -1,7 +1,7 @@
 #!/bin/bash
 set -m
 
-freshclam -d &
+freshclam
 clamd &
 
 pids=`jobs -p`
