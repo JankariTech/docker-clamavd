@@ -21,7 +21,7 @@ function terminate() {
     kill $pids 2>/dev/null
 }
 
-trap terminate CHLD
+trap terminate CHLD SIGINT SIGTERM
 wait
 
 exit $exitcode
