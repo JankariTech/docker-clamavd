@@ -1,0 +1,13 @@
+name: Scheduled Docker Build
+on:
+  schedule:
+    - cron:  '0 1 1 * *'
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST --silent --output /dev/null ${{ secrets.TRIGGER_DOCKERHUB_BUILD }}
