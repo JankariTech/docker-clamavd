@@ -1,6 +1,9 @@
 docker-clamavd
 ==============
 
+Note: This fork is not actively maintained. ownCloud CI is now using https://github.com/owncloud-ci/clamavd
+      So please do not depend on this https://github.com/JankariTech/docker-clamavd fork.
+
 ClamAV daemon as a Docker image. It *builds* with a current virus database and
 *runs* `freshclam` in the background constantly updating the database. `clamd` 
 is listening on exposed port `3310`.
